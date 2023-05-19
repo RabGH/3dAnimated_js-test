@@ -1,0 +1,130 @@
+@import url('https://use.typekit.net/jmk3xov.css');
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+:root {
+  --primary-color: #4f4f4f4b;
+  --secondary-color: #ededed5e;
+  --dark-bg: #1E1E1E;
+  --spacing: 1rem;
+  --border-radius: 1rem;
+  
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  width: 100%;
+  z-index: 99;
+  position: relative;
+  color: var(--dark-bg);
+  margin: 0 auto;
+  padding: 5rem 0;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 2rem;
+}
+
+h1, h2, h3, blockquote {
+  font-family: Halvetica, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+header {
+  background: var(--secondary-color);
+  grid-column: 2 / 12;
+  font-size: 1.5rem;
+  padding: 0;
+  padding-right: 12rem;
+  padding-left: 12rem;
+  margin: 0;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+blockquote {
+  margin: 0;
+  padding: 0;
+  grid-column: 2 / span 10;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+blockquote p {
+  color: var(--dark-bg);
+  background-color: var(--primary-color);
+  font-size: 2rem;
+  display: inline;
+  line-height: 1;
+  padding: 1rem 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section {
+  grid-column: 2 / span 8;
+  padding: 1rem;
+  background: rgba(47, 79, 104, 0.7);
+  font-size: 1.25rem;
+  line-height: 1;
+  margin-bottom: var(--spacing);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section.light {
+  background: var(--secondary-color);
+  color: var(--dark-bg);
+}
+
+h2 {
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+/* Media queries */
+
+@media only screen and (max-width: 767px) {
+  main {
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 1rem;
+    padding: 4rem 0;
+  }
+
+  header {
+    grid-column: 1 / span 6;
+    font-size: 2.5rem;
+    padding: 1rem;
+    margin-bottom: var(--spacing);
+  }
+}
